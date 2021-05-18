@@ -26,7 +26,12 @@ add-apt-repository \
    stable" && \
 apt-get update && \
 apt-get -y install docker-ce
+
+
+
 now you will be inside your docker and run '''docker ps''' you will get something like this
+
+
 
 root@cf1fd5908a1c:/# docker ps
 CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                               NAMES
