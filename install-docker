@@ -12,4 +12,4 @@ sudo apt-get install docker-ce docker-ce-cli containerd.io
 
 sudo docker run hello-world
 
-sudo usermod -a -G docker USERNAME
+sudo usermod -a -G docker ubuntu
