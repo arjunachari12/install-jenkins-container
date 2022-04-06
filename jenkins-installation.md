@@ -12,7 +12,7 @@ After completion of jenkins installation
 docker exec -it -u root jenkins bash
 
 3.install docker in docker
-
+```sh
 apt-get update && \
 apt-get -y install apt-transport-https \
      ca-certificates \
@@ -26,7 +26,7 @@ add-apt-repository \
    stable" && \
 apt-get update && \
 apt-get -y install docker-ce
-
+```
 
 
 now you will be inside your docker and run '''docker ps''' you will get something like this
