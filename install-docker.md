@@ -1,11 +1,23 @@
-```bash sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y```
+```bash 
+sudo apt-get update && sudo apt-get install apt-transport-https ca-certificates curl gnupg lsb-release -y
+```
    
-```bash curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg```
+```bash 
+curl -fsSL https://download.docker.com/linux/ubuntu/gpg | sudo gpg --dearmor -o /usr/share/keyrings/docker-archive-keyring.gpg
+```
 
-```bash echo "deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null```
+```bash echo 
+"deb [arch=amd64 signed-by=/usr/share/keyrings/docker-archive-keyring.gpg] https://download.docker.com/linux/ubuntu $(lsb_release -cs) stable" | sudo tee /etc/apt/sources.list.d/docker.list > /dev/null
+```
   
-```bash sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -y```
+```bash 
+sudo apt-get update && sudo apt-get install docker-ce docker-ce-cli containerd.io -y
+```
 
-```bash sudo docker run hello-world```
+```bash 
+sudo docker run hello-world
+```
 
-```bash sudo usermod -a -G docker ubuntu```
+```bash 
+sudo usermod -a -G docker ubuntu
+```
