@@ -1,4 +1,10 @@
-for rgname in `az group list --query "[].name" -o tsv`; do
-echo Deleting ${rgname}
-az group delete -n ${rgname} --yes --no-wait
-done
+Option 1 Powershell ISE
+#Execute below command in Powershel ISE
+#create a new ps1 file, add below content and execute 
+az login
+az account set -s <subs-id>
+
+foreach ($rgname in az group list --query "[].name" -o tsv) 
+{  
+az group delete -n $rgname --yes --no-wait 
+}
