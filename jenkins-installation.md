@@ -1,18 +1,17 @@
-1.Go to your cmd run this command
+
+# Install Jenkins on Ubuntu
 
 
+```bash
 docker run -p 8080:8080 -v /var/run/docker.sock:/var/run/docker.sock --name jenkins jenkins/jenkins:lts
+```
+## exec to jenkins container
 
-we will get an initial admin password do the jenkins installation steps
-
-After completion of jenkins installation
-
-2.To enter into your docker image run this command
-
+```bash
 docker exec -it -u root jenkins bash
-
-3.install docker in docker
-```sh
+```
+## install docker in docker
+```bash
 apt-get update && \
 apt-get -y install apt-transport-https \
      ca-certificates \
@@ -27,18 +26,15 @@ add-apt-repository \
 apt-get update && \
 apt-get -y install docker-ce
 ```
-
-
-now you will be inside your docker and run '''docker ps''' you will get something like this
-
-
-
-root@cf1fd5908a1c:/# docker ps
-CONTAINER ID        IMAGE                 COMMAND                  CREATED             STATUS              PORTS                               NAMES
-cf1fd5908a1c        jenkins/jenkins:lts   "/sbin/tini -- /usr/…"   2 hours ago         Up 12 minutes       0.0.0.0:8080->8080/tcp, 50000/tcp   jenkins
-root@cf1fd5908a1c:/#   
-this means you have succesfully created the image
-
-Now to give jenkins actions access to all users for that run this command
-
+## Docker ps inside jenkins container
+```bash
+docker ps
+```
+## Docker ps inside jenkins container
+```bash
+exit
+```
+## execute below in vm
+```bash
 chmod 777 /var/run/docker.sock
+```
