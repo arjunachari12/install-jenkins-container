@@ -36,5 +36,5 @@ exit
 ```
 ## execute below in vm
 ```bash
-chmod 777 /var/run/docker.sock
+sudo chmod 777 /var/run/docker.sock
 ```
