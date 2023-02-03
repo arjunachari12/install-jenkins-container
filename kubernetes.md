@@ -2,14 +2,7 @@
 
 Quick guide to install Kubernetes via Minikube on Ubuntu 18.04.
 
-## 1. Install VirtualBox
-Install VirtualBox to be used as the hypervisor.
-
-```bash
-sudo apt-get install -y virtualbox virtualbox-ext-pack
-```
-
-## 2. Install kubectl
+## 1. Install kubectl
 Install kubectl, the kubernetes command line tool.
 
 ```bash
@@ -22,7 +15,7 @@ sudo apt-get update && \
   sudo apt-get install -y kubectl
 ```
 
-## 3. Install Minikube
+## 2. Install Minikube
 Install Minikube to run your single node kubernetes cluster.
 
 ```bash
@@ -31,7 +24,7 @@ curl -Lo minikube https://storage.googleapis.com/minikube/releases/latest/miniku
   sudo cp minikube /usr/local/bin && rm minikube
 ```
 
-## 4. Done!
+## 3. Done!
 You can run Minikube and start your cluster by running:
 
 ```bash
