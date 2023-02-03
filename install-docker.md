@@ -32,8 +32,14 @@ sudo docker run hello-world
 ```
 
 # Adding ubuntu user to the "docker" group
+For AWS use below command
 ```bash
 sudo usermod -a -G docker ubuntu
+```
+
+For Azure use below command
+```bash
+sudo usermod -a -G docker azureuser
 ```
 
 # Restart Ubuntu VM
