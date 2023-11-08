@@ -16,3 +16,6 @@ sudo apt-get update && sudo apt-get install terraform
 
 terraform -help
 ```
+
+Challenge: <br />
+Use AWS VPC and EC2 modules, https://developer.hashicorp.com/terraform/tutorials/modules/module-use<br />
