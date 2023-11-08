@@ -6,7 +6,13 @@
 docker network create jenkins
 ```
 ## 2. create dockerfile add below content
-
+### Create folder called jenkins
+```bash
+mkdir jenkins
+cd jenkins
+vi Dockerfile
+```
+### Add below content into Dockerfile
 ```bash
 FROM jenkins/jenkins:2.361.2-jdk11
 USER root
