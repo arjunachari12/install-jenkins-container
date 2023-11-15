@@ -1,8 +1,3 @@
-Deleting all VPCs except the default VPC can be a sensitive operation as it will remove all the resources associated with those VPCs, including EC2 instances, subnets, security groups, route tables, and more. Ensure that you understand the implications and have backups or snapshots of critical data before running such a script.
-
-Here's a script that can be used to delete all non-default VPCs across all AWS regions:
-
-```bash
 #!/bin/bash
 
 # Get a list of all AWS regions
@@ -58,15 +53,3 @@ for region in $(echo "$regions" | jq -r '.[]'); do
     aws ec2 delete-vpc --vpc-id "$vpc" > /dev/null 2>&1
   done
 done
-```
-
-This script does the following for each non-default VPC:
-
-- Detaches and deletes internet gateways if attached.
-- Detaches and deletes VPN gateways if attached.
-- Deletes subnets.
-- Deletes security groups.
-- Deletes route tables.
-- Deletes the VPC itself.
-
-Please exercise caution when running this script and ensure that you have appropriate backups or snapshots before proceeding. Additionally, ensure that your AWS CLI configuration has the necessary permissions to describe and delete resources in all regions.
