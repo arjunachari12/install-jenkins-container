@@ -6,13 +6,11 @@ Quick guide to install Kubernetes via Minikube on Ubuntu 18.04.
 Install kubectl, the kubernetes command line tool.
 
 ```bash
-sudo apt-get update && \
-  sudo apt-get install -y apt-transport-https && \
-  curl -s https://packages.cloud.google.com/apt/doc/apt-key.gpg | sudo apt-key add - && \
-  sudo touch /etc/apt/sources.list.d/kubernetes.list && \
-  echo "deb http://apt.kubernetes.io/ kubernetes-xenial main" | sudo tee -a /etc/apt/sources.list.d/kubernetes.list && \
-  sudo apt-get update && \
-  sudo apt-get install -y kubectl
+curl -LO "https://dl.k8s.io/release/$(curl -L -s https://dl.k8s.io/release/stable.txt)/bin/linux/amd64/kubectl"
+```
+```bash
+sudo install -o root -g root -m 0755 kubectl /usr/local/bin/kubectl
+kubectl version --client
 ```
 
 ## 2. Install Minikube
