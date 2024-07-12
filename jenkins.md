@@ -55,12 +55,12 @@ docker run --name jenkins-blueocean --restart=on-failure --detach \
   --volume jenkins-docker-certs:/certs/client:ro \
   myjenkins-blueocean:2.414.3-1
 ```
-## 5. Access Jenkins
+## 6. Access Jenkins
 
 ```bash
 http://localhost:8080
 ```
-## 5. Get Jenkins password
+## 7. Get Jenkins password
 
 ```bash
 docker logs jenkins-blueocean
